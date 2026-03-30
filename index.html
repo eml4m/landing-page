@@ -16,6 +16,7 @@
     --rust: #B85C38;
     --rust-light: #D4785A;
     --sage: #7A8C6E;
+    --sage-dark: #5A6E50;
     --gold: #C9A84C;
     --border: #DDD0BC;
   }
@@ -75,10 +76,7 @@
     animation: fadeUp 0.9s ease forwards 0.4s;
   }
 
-  h1 em {
-    font-style: italic;
-    color: var(--rust);
-  }
+  h1 em { font-style: italic; color: var(--rust); }
 
   .subheadline {
     font-family: 'Lora', serif;
@@ -107,11 +105,7 @@
     background: linear-gradient(90deg, transparent, var(--border), transparent);
   }
 
-  .divider-ornament {
-    color: var(--gold);
-    font-size: 18px;
-    line-height: 1;
-  }
+  .divider-ornament { color: var(--gold); font-size: 18px; }
 
   /* Note cards */
   .notes-preview {
@@ -152,7 +146,6 @@
   }
 
   .note-from {
-    font-family: 'Lora', serif;
     font-style: italic;
     font-size: 11px;
     color: var(--ink-faint);
@@ -161,7 +154,6 @@
   }
 
   .note-text {
-    font-family: 'Lora', serif;
     font-size: 13.5px;
     line-height: 1.7;
     color: var(--ink-light);
@@ -169,14 +161,11 @@
 
   /* Why section */
   .why-section {
-    padding: 72px 24px 64px;
+    padding: 64px 24px 56px;
     text-align: center;
   }
 
-  .why-inner {
-    max-width: 700px;
-    margin: 0 auto;
-  }
+  .why-inner { max-width: 700px; margin: 0 auto; }
 
   .why-heading {
     font-family: 'Playfair Display', serif;
@@ -196,15 +185,9 @@
     text-align: left;
   }
 
-  .why-item {
-    max-width: 195px;
-  }
+  .why-item { max-width: 195px; }
 
-  .why-ornament {
-    font-size: 24px;
-    margin-bottom: 14px;
-    display: block;
-  }
+  .why-ornament { font-size: 24px; margin-bottom: 14px; display: block; }
 
   .why-title {
     font-family: 'Playfair Display', serif;
@@ -214,97 +197,192 @@
     margin-bottom: 8px;
   }
 
-  .why-text {
-    font-family: 'Lora', serif;
-    font-size: 14px;
-    line-height: 1.75;
-    color: var(--ink-light);
+  .why-text { font-size: 14px; line-height: 1.75; color: var(--ink-light); }
+
+  /* Section tag */
+  .section-tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 24px;
   }
 
-  /* CTA section */
-  .cta-section {
-    background: var(--warm-white);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    padding: 88px 24px;
+  /* Email section — dark */
+  .email-section {
+    background: #2C2416;
+    padding: 80px 24px;
     text-align: center;
     position: relative;
+    overflow: hidden;
   }
 
-  .cta-section::before {
+  .email-section::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(240,232,216,0.35) 0%, transparent 40%, rgba(240,232,216,0.35) 100%);
+    background: linear-gradient(135deg, rgba(184,92,56,0.15) 0%, transparent 60%);
     pointer-events: none;
   }
 
-  .cta-inner {
-    max-width: 540px;
+  .email-inner {
+    max-width: 520px;
     margin: 0 auto;
     position: relative;
   }
 
-  .cta-ornament {
-    font-size: 28px;
-    margin-bottom: 24px;
-    display: block;
-    color: var(--gold);
+  .section-tag-rust {
+    background: rgba(184,92,56,0.2);
+    color: #E8A882;
+    border: 1px solid rgba(184,92,56,0.3);
   }
 
-  .cta-heading {
+  .email-heading {
     font-family: 'Playfair Display', serif;
     font-size: clamp(26px, 4vw, 38px);
     font-weight: 500;
-    color: var(--ink);
-    margin-bottom: 18px;
+    color: #FAF6EF;
+    margin-bottom: 14px;
     line-height: 1.25;
   }
 
-  .cta-heading em {
-    font-style: italic;
-    color: var(--rust);
-  }
+  .email-heading em { font-style: italic; color: #E8A882; }
 
-  .cta-body {
-    font-family: 'Lora', serif;
-    font-size: 17px;
+  .email-body {
+    font-size: 16px;
     line-height: 1.8;
-    color: var(--ink-light);
-    margin-bottom: 44px;
+    color: #C4B49A;
+    margin-bottom: 36px;
   }
 
-  .cta-btn {
+  .email-btn {
     display: inline-block;
     font-family: 'Lora', serif;
     font-size: 17px;
     color: white;
     background: var(--rust);
     border-radius: 3px;
-    padding: 18px 52px;
-    cursor: pointer;
+    padding: 16px 44px;
     text-decoration: none;
     transition: all 0.25s ease;
     letter-spacing: 0.03em;
-    margin-bottom: 20px;
   }
 
-  .cta-btn:hover {
+  .email-btn:hover {
     background: var(--rust-light);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(184,92,56,0.32);
+    box-shadow: 0 6px 20px rgba(184,92,56,0.4);
   }
 
-  .cta-reassurance {
+  .email-reassurance {
     display: block;
-    font-family: 'Lora', serif;
+    margin-top: 16px;
+    font-size: 12px;
+    color: #5C5042;
     font-style: italic;
-    font-size: 13px;
-    color: var(--ink-faint);
-    margin-top: 4px;
   }
 
-  /* Footer */
+  /* Or divider */
+  .or-divider {
+    position: relative;
+    height: 32px;
+    background: linear-gradient(180deg, #2C2416 50%, var(--warm-white) 50%);
+  }
+
+  .or-label {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--parchment);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 6px 20px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-style: italic;
+    white-space: nowrap;
+    top: 50%;
+    margin-top: -14px;
+  }
+
+  /* Survey section — light */
+  .survey-section {
+    background: var(--warm-white);
+    border-top: 4px solid var(--border);
+    padding: 80px 24px;
+    text-align: center;
+    position: relative;
+  }
+
+  .survey-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(122,140,110,0.06) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .survey-inner {
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .section-tag-sage {
+    background: rgba(122,140,110,0.12);
+    color: var(--sage-dark);
+    border: 1px solid rgba(122,140,110,0.25);
+  }
+
+  .survey-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 14px;
+    line-height: 1.25;
+  }
+
+  .survey-heading em { font-style: italic; color: var(--sage-dark); }
+
+  .survey-body {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--ink-light);
+    margin-bottom: 36px;
+  }
+
+  .survey-btn {
+    display: inline-block;
+    font-family: 'Lora', serif;
+    font-size: 17px;
+    color: white;
+    background: var(--sage-dark);
+    border-radius: 3px;
+    padding: 16px 44px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    letter-spacing: 0.03em;
+  }
+
+  .survey-btn:hover {
+    background: var(--sage);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(90,110,80,0.28);
+  }
+
+  .survey-reassurance {
+    display: block;
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--ink-faint);
+    font-style: italic;
+  }
+
   footer {
     text-align: center;
     padding: 40px 24px;
@@ -312,6 +390,7 @@
     color: var(--ink-faint);
     font-style: italic;
     border-top: 1px solid var(--border);
+    background: var(--cream);
   }
 
   @keyframes fadeUp {
@@ -324,7 +403,7 @@
     .note-card { max-width: 160px; padding: 16px 18px; }
     .note-text { font-size: 12px; }
     .why-item { max-width: 145px; }
-    .cta-btn { padding: 16px 36px; font-size: 16px; }
+    .email-btn, .survey-btn { padding: 14px 32px; font-size: 16px; }
   }
 </style>
 </head>
@@ -337,7 +416,6 @@
   <p class="eyebrow">Messages that stay with you</p>
   <h1>Some messages are too <em>important</em> to lose.</h1>
   <p class="subheadline">The texts that made you smile, the notes that got you through hard days, the words from people you love — they deserve better than getting buried in your phone.</p>
-
   <div class="divider">
     <div class="divider-line"></div>
     <div class="divider-ornament">✦</div>
@@ -385,14 +463,30 @@
   </div>
 </div>
 
-<!-- CTA -->
-<section class="cta-section">
-  <div class="cta-inner">
-    <span class="cta-ornament">✦</span>
-    <h2 class="cta-heading">We're building something <em>for you.</em></h2>
-    <p class="cta-body">We'd love to hear about your experience. It takes less than 2 minutes, and every answer helps us build something truly worth keeping.</p>
-    <a class="cta-btn" href="https://forms.microsoft.com/Pages/ResponsePage.aspx?id=IdgT-Wi0e0SoSo6IZwU1mj6S6a3ymLZHnNLSVjGOKfJUMzYwR0szTFNHVjQxWkQwNDhETjlIS1ozUi4u" target="_blank">Share your experience →</a>
-    <span class="cta-reassurance">Takes less than 2 minutes · Your answers are kept private.</span>
+<!-- Email signup — dark section -->
+<section class="email-section">
+  <div class="email-inner">
+    <span class="section-tag section-tag-rust">Stay in the loop</span>
+    <h2 class="email-heading">Be the first to know when we <em>launch.</em></h2>
+    <p class="email-body">No surveys, no commitments — just a quiet note from us when we're ready.</p>
+    <a class="email-btn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAARLN9rFUNzlKQTRINEFWREVPVzVZM1FHMlM1MlFHWi4u" target="_blank">Keep me posted →</a>
+    <span class="email-reassurance">No spam, ever. Just one note when we're ready.</span>
+  </div>
+</section>
+
+<!-- Or divider -->
+<div class="or-divider">
+  <div class="or-label">or</div>
+</div>
+
+<!-- Survey — light section -->
+<section class="survey-section">
+  <div class="survey-inner">
+    <span class="section-tag section-tag-sage">Share your experience</span>
+    <h2 class="survey-heading">Help us build something <em>worth keeping.</em></h2>
+    <p class="survey-body">Have 2 minutes? We'd love to hear about your experience with saving meaningful messages. Your answers shape everything we build.</p>
+    <a class="survey-btn" href="https://forms.microsoft.com/Pages/ResponsePage.aspx?id=IdgT-Wi0e0SoSo6IZwU1mj6S6a3ymLZHnNLSVjGOKfJUMzYwR0szTFNHVjQxWkQwNDhETjlIS1ozUi4u" target="_blank">Take the 2-minute survey →</a>
+    <span class="survey-reassurance">Takes less than 2 minutes · Your answers are kept private.</span>
   </div>
 </section>
 
